@@ -1,0 +1,12 @@
+--another step,this how we load data in the table database
+
+
+
+BULK INSERT bronze.crm_cust_info
+FROM 'C:\sql-data-warehouse-project\01_datasets\source_crm\cust_info.csv'
+WITH (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',
+    ROWTERMINATOR = '\n',
+    TABLOCK
+);
